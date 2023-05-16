@@ -11,7 +11,7 @@ load_dotenv(find_dotenv())
 
 bot = Bot(token=os.getenv("TOKEN"), parse_mode=types.ParseMode.HTML)
 openai.api_key=token=os.getenv("OPENAI")
-#openai.api_key =config.openai.get_secret_value()
+
 
 dp = Dispatcher(bot, storage=MemoryStorage())
 
