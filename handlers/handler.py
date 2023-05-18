@@ -2,6 +2,7 @@
 # Будет состоять из функций-обработчиков с декораторами (фильтрами)
 
 import os
+
 from communi_bot import openai
 from aiogram import types
 from communi_bot import Dispatcher, bot
