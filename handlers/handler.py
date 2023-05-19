@@ -25,8 +25,23 @@ def update(messages, role, content):
     messages.append({"role": role, "content": content})
     return messages
 
+def analytics (func: callable):
+    total_message = 0
+    users = set()
+    total_users = 0
+    def analytics_wrapper(message):
+        nonlocal total_message, total_users
+        total_message += 1
 
+        if message.chat.id not in users:
+            users.add(message.chat.id)
+            total_users += 1
 
+        print("New message: ", message.text, "Total: ", total_message, "Total users: ", total_users)
+        return func(message)
+    return analytics_wrapper
+
+@ analytics
 async def send(message: types.Message):
     update(messages, "user", message.text)
 
