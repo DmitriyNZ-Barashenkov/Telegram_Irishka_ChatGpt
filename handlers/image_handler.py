@@ -18,4 +18,3 @@ async def send_image(message: types.Message):
 
 def register_handlers(dp : Dispatcher):
     dp.register_message_handler(send_image, commands=['dalle'])
-    dp.register_message_handler(process_image_command, commands=["image"])
