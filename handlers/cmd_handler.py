@@ -10,7 +10,7 @@ async def cmd_start(message: types.Message):
     await message.answer("Привет! Меня зовут Иришка! Я ИИ бот на базе ChatGPT от компании OpenAI. Напишите Ваш запрос!", reply_markup=start_keyboard)
 
 async def cmd_help(message: types.Message):
-    await message.answer("Список доступных команд:\n/start - начать диалог с Иришкой.\n/help - получить список доступных команд.\n/info - получить описание бота.\n/donat - поддержать разработку Иришки", reply_markup=start_keyboard)
+    await message.answer("Список доступных команд:\n/start - начать диалог с Иришкой.\n/help - получить список доступных команд.\n/dalle- команда для генирации изображений по письменному описанию, после команды пишем описание\n/info - получить описание бота.\n/donat - поддержать разработку Иришки", reply_markup=start_keyboard)
 
 async def cmd_donat(message: types.Message):
     await message.answer("https://pay.mysbertips.ru/37382224, Спасибо, что решил поддержать разработку Иришки! Нажми на ссылку выше, чтобы перейти на страницу оплаты", reply_markup=start_keyboard)
