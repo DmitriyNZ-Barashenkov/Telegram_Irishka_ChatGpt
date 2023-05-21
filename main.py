@@ -11,7 +11,7 @@ from communi_bot import load_dotenv, find_dotenv, bot
 
 
 from communi_bot import dp
-from handlers import handler, cmd_handler
+from handlers import handler, cmd_handler, image_handler
 
 load_dotenv(find_dotenv())
 
@@ -30,6 +30,7 @@ logger.setLevel(logging.DEBUG)
 
 
 cmd_handler.register_handlers(dp)
+image_handler.register_handlers(dp)
 handler.register_handlers(dp)
 
 
